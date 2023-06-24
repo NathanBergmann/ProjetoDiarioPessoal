@@ -1,0 +1,20 @@
+* Criar Seleção de Tarefas:
+
+ [1] Incluir anotações no Dia atual;
+ [2] Visualizar outros dias;
+ [3] Deletar anotações de dias anteriores;
+ [4] Alte
+
+
+ * Incluir anotações no Dia atual;
+   -> Apenas incluir informações
+
+ * Visualizar outros dias;
+   -> Selecionar o dia que deseja;
+   -> Trazer as informações do dia
+
+ * Deletar anotações de dias anteriores;
+   -> informar o dia;
+   -> Visualizar o dia
+   -> Confirmar exclusao
+ 
