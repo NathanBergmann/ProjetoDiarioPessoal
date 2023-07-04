@@ -1,5 +1,3 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 import java.io.IOException;
 import java.util.Scanner;
 public class Main {
@@ -27,15 +25,19 @@ public class Main {
                     String strNomeArquivo = entrada.next();
                     escrever.VisualizarArquivo(strNomeArquivo);
                     System.out.println("");
-
                     break;
 
                 case "3":
-                    System.out.println("Entrou caso 3");
+                    System.out.println("------------------------");
+                    System.out.println("Digite o dia para deletar: dd-mm-yyyy");
+                    String strNomeArquivoDel = entrada.next();
+                    escrever.DeletarArquivo(strNomeArquivoDel);
                     break;
+
                 case "4":
                     escrever.ExcluirInformações();
                     break;
+
                 case "99":
                     System.out.println("Fechando o Diario");
                     repetir = false;
@@ -44,8 +46,6 @@ public class Main {
                 default:
                     System.out.println("Opção Inválida");
                     break;
-
-// bloco de código que será executado se nenhum dos cases for aceito
 
             }
 

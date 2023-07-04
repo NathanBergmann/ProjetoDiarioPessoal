@@ -1,7 +1,4 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -20,9 +17,13 @@ public class Arquivos extends Configuracoes{
         return exists ;
     }
 
-   public void VisualizarArquivo(String nome){
+   public void Visualizar(String nome){
            Scanner entrada = new Scanner(System.in);
            String dirConfig = getPath();
+          if (!ArquivoExist(dirConfig, nome)){
+              System.out.println("O arquivo " + nome + " não existe.");
+              return;
+          }
            String caminhoDoArquivo = (dirConfig + "\\" +  nome+ ".txt");
            Path arquivo = Paths.get(caminhoDoArquivo);
            try {
@@ -52,8 +53,14 @@ public class Arquivos extends Configuracoes{
             bw.close();
 
         } catch (IOException var7) {
-
         }
     }
-
+    public void DeletarArquivo(String nomeArquivo){
+        Configuracoes c = new Configuracoes();
+        File file = new File( c.getPath()+"\\"+nomeArquivo+".txt" );
+        Scanner entrada = new Scanner(System.in);
+        System.out.println("Confirma a exclusão do arquivo:"+nomeArquivo+" S/N ?");
+        String confirmar = entrada.next();
+        file.delete();
+    }
 }

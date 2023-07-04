@@ -14,10 +14,6 @@ public class Diario extends Arquivos{
         EscreverArquivo(dataFormatada);
         }
 
-    public void EscreverOutrasDatas(String data){
-
-    }
-
     public void ExcluirInformações() { // PREPARAR
         String nomeArquivo = "Arquivos/27-06-2023.txt";
         try {
@@ -33,8 +29,8 @@ public class Diario extends Arquivos{
     }
     public  void VisualizarArquivo(String nomeArquivo){
         Scanner entrada = new Scanner(System.in);
-        VisualizarArquivo(nomeArquivo);
-        System.out.println("Pressione enter para voltar....");
-        String teclaSair = entrada.nextLine();
+        Visualizar(nomeArquivo);
+//        System.out.println("Pressione enter para voltar....");
+      //  String teclaSair = entrada.nextLine();
     }
 }
